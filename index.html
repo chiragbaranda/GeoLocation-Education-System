@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title> </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-1.7-development-only.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <h1>GeoLocation Education System</h1>
+        </header>
+
+        <section class="columns">
+
+            <div class="column">
+                <h2>Menu</h2>
+                <button class="button button2" id="All School" onclick="allSchool()"> All </button>
+
+                <button class="button button2" id="Elementary School" onclick="typeofSchool(this.id)"> Elementry School </button>
+
+                <button class="button button2" id="Secondary School" onclick="typeofSchool(this.id)"> Secondary School </button>
+
+                <button class="button button2" id="Post Secondary" onclick="typeofSchool(this.id)">PostSecondary School </button>
+
+                <button class="button button2" id="Alternative Education" onclick="typeofSchool(this.id)"> Alternative Education </button>
+
+                <button class="button button2" id="Adult Learning" onclick="typeofSchool(this.id)"> Adult Education </button>
+
+                <button class="button button2" id="Section 23 Program" onclick="typeofSchool(this.id)"> Section 23 Education </button>
+
+            </div>
+
+            <div class="columnMap">
+                <div id='myMap' style='width: 600px; height: 600px;'></div>
+                <script type='text/javascript' src="education.js"></script>
+                <script type='text/javascript' src="main.js"></script>
+                <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AkgH3ebYWOUmhwfx4kXc_Yn84Wz6g-resdxO_p0XmXY1f0Iz_m-jSs5wcHDFRUrA&callback=loadMapScenario' async defer></script>
+
+
+                <br>
+                
+                <p id="errorMSG"> </p>
+
+
+                <table style="margin-left: 130px">
+                    <tr>
+                        <td><B>Name</B></td>
+                        <td><input id="nameofpin" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td><b>Address</b></td>
+                        <td><input id='searchTbx' type='text' /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"> <input type='button' value='Submit' onclick='Search()' /> </td>
+                    </tr>
+
+
+                </table>
+
+            </div>
+
+            <div class="columnDirection">
+
+                <h2>Directions</h2>
+                <div id='directionsItinerary'></div>
+                <div style="align-items: center"> <button class="button button2" style="align-self: center" id="All School" onclick="clearDirection()">Clear Direction</button></div>
+
+            </div>
+
+        </section>
+
+    </div>
+</body></html>

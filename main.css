@@ -1,0 +1,150 @@
+
+        .wrapper {
+            padding: 5px;
+            max-width: 1500px;
+            width: 95%;
+            margin: 20px auto;
+            max-height: 600px
+        }
+
+        .columns {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin: 5px 0;
+            max-height: 600px;
+        }
+
+        .column {
+            flex: 1;
+            border: 1px solid gray;
+            margin: 2px;
+            padding: 10px;
+            width: 200px;
+            max-height: 600px;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+        .columnMap {
+            flex: 1;
+            border: 1px solid gray;
+            margin: 2px;
+            padding: 10px;
+            width: 600px;
+            max-height: 600px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+        .columnDirection {
+            flex: 1;
+            border: 1px solid gray;
+            margin: 2px;
+            padding: 10px;
+            width: 400px;
+            max-height: 600px;
+            overflow: scroll;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+
+
+        @media screen and (max-width: 980px) {
+            .columns .column {
+                margin-bottom: 5px;
+                flex-basis: 40%;
+
+                &:nth-last-child(2) {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    flex-basis: 100%;
+                    margin: 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .columns .column {
+                flex-basis: 100%;
+                margin: 0 0 5px 0;
+            }
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button2 {
+            margin-left: 85px;
+            width: 230px;
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+        }
+
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+
+        .overflow {
+            
+            max-height: 600px;
+
+            /* width */
+            ::-webkit-scrollbar {
+                height: 600px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+        }
